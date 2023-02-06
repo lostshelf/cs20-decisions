@@ -30,7 +30,7 @@ public class Main {
             // to the original price
             price *= 1.05;
 
-        System.out.println("Total price for the + " + item + ": " + price + ".");
+        System.out.println("Total price for the " + item + " is " + price + ".");
     }
     static void six() {
         Scanner scan = new Scanner(System.in);
@@ -42,7 +42,7 @@ public class Main {
 
         // Exit early if they are younger than 16
         if (age < 16) {
-            System.out.println("You are not allowed to drive: must 16 or older.");
+            System.out.println("You are not allowed to drive: must be 16 or older.");
             return;
         }
 
