@@ -10,7 +10,8 @@ public class Main {
         Random rand = new Random();
 
         // Limit the number to be between 1 and 10
-        int num = rand.nextInt(1, 10);
+        // The bound is 11 because it is exclusive, if I set it to 10, then the numbers would only be from 1-9
+        int num = rand.nextInt(1, 11);
 
         if (num > 5)
             System.out.println("The number is greater than five.");
@@ -25,6 +26,8 @@ public class Main {
         double price = Double.parseDouble(scan.nextLine().trim());
 
         if (item.equals("ice cream"))
+            // Shortcut for applying tax to an item, same as multiplying the original price by 0.05 and adding it back
+            // to the original price
             price *= 1.05;
 
         System.out.println("Total price for the + " + item + ": " + price + ".");
@@ -52,7 +55,7 @@ public class Main {
             return;
         }
 
-        // Since the above checks return if failed, the information entered makes the user eligible as it is the only combination left
+        // Since the above checks returns if not eligible, since the code reached this far, the user has to be eligible for a driver's license
         System.out.println("You are eligible to drive!");
 
     }
@@ -65,7 +68,7 @@ public class Main {
         if (csMark >= 80)
             System.out.println("A");
             // If this runs, I know that the mark is not greater than or equal to 80, so it has to be less than 79 so if I
-            // check if it is greater than 70, it is the same as checking if 80 > csMark >= 70
+            // check is it is greater than 70, it is the same as checking if 80 > csMark >= 70
             // This logic continues for the rest of the chain
         else if (csMark >= 70)
             System.out.println("B");
