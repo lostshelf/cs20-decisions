@@ -10,8 +10,8 @@ public class Main {
         Random rand = new Random();
 
         // Limit the number to be between 1 and 10
-        // The bound is 11 because it is exclusive, if I set it to 10, then the numbers would only be from 1-9
-        int num = rand.nextInt(1, 11);
+        // I add 1 to the number otherwise it would only be from 0-9 and not 1-10
+        int num = rand.nextInt(10) + 1;
 
         if (num > 5)
             System.out.println("The number is greater than five.");
